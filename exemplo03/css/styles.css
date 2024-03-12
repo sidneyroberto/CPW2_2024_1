@@ -15,6 +15,19 @@ body {
     text-align: center;
 }
 
+#direct-color-controls {
+    margin: 20px 0;
+}
+
+#direct-color-controls label {
+    margin-right: 10px;
+}
+
+h2 {
+    font-family: 'bold';
+    margin-bottom: 0;
+}
+
 label {
     font-family: 'regular';
     font-size: 20px;
@@ -31,7 +44,8 @@ input[type=range] {
         height: 300px;
     }
 
-    label, input[type=range] {
+    #color-display-rgba > label, 
+    #color-display-rgba > input[type=range] {
         display: block;
         text-align: center;
     }
