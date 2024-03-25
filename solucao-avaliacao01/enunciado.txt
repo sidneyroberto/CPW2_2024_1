@@ -1,0 +1,14 @@
+Crie uma página web que simule empréstimos. A página deve permitir que o usuário informe o valor a ser emprestado (mínimo R$ 500), a quantidade de parcelas (1 a 24) e o tipo de cliente. Use os inputs apropriados para cada um dos dados. Após o usuário informar os dados, devem ser exibidos na tela o valor total a ser pago pelo usuário (montante) e o valor de cada parcela a ser paga.
+
+Fórmula de cálculo: 
+
+montante = valor * (1 + ((taxaJuros/100) * parcelas))
+prestacao = montante / parcelas
+
+Tabela de taxa de juros de acordo com tipo de cliente:
+
+Standard: 2.5%
+Platinum: 1.99%
+Gold: 1.2%
+
+Ao finalizar, chame o professor para que ele possa realizar a correção.

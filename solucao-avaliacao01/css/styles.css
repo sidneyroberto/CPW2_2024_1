@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "regular";
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 400px;
+}
+
+#container > * {
+  margin-bottom: 10px;
+}
+
+#result {
+  font-family: "bold";
+}
