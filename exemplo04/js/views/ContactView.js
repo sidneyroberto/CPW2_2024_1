@@ -1,5 +1,9 @@
-import { saveContact } from "../controllers/ContactController";
-import Contact from "../models/Contact";
+import { saveContact } from "../controllers/ContactController.js";
+import Contact from "../models/Contact.js";
+
+$(document).ready(function () {
+  $("#phone").mask("(00) 00000-0000");
+});
 
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
@@ -20,9 +24,15 @@ const getContact = () => {
   return contact;
 };
 
-export const onSubmitContactForm = () => {
+export const onSubmitContactForm = (event) => {
+  /**
+   * Esta linha de código SEMPRE deve
+   * ser executada logo no início!!!
+   */
+  event.preventDefault();
   const contact = getContact();
   saveContact(contact);
+  contactForm.reset();
   renderContact(contact);
   contactsAreaTitle.innerText = "Contatos salvos";
 };
@@ -52,4 +62,6 @@ const renderContact = (contact) => {
         }
     </div>
   `;
+
+  contactsList.insertAdjacentHTML("beforeend", contactCardContent);
 };
