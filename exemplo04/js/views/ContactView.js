@@ -1,4 +1,4 @@
-import { saveContact } from "../controllers/ContactController.js";
+import { getContacts, saveContact } from "../controllers/ContactController.js";
 import Contact from "../models/Contact.js";
 
 $(document).ready(function () {
@@ -64,4 +64,9 @@ const renderContact = (contact) => {
   `;
 
   contactsList.insertAdjacentHTML("beforeend", contactCardContent);
+};
+
+export const renderContactsList = () => {
+  const contacts = getContacts();
+  contacts.forEach((c) => renderContact(c));
 };

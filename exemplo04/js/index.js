@@ -1,3 +1,8 @@
-import { onSubmitContactForm } from "./views/ContactView.js";
+import {
+  onSubmitContactForm,
+  renderContactsList,
+} from "./views/ContactView.js";
 
 document.getElementById("contact-form").onsubmit = onSubmitContactForm;
+
+renderContactsList();
