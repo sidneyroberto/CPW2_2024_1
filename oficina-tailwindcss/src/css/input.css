@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "regular";
+  src: url(../fonts/NotoSansJP-Light.ttf);
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(../fonts/NotoSansJP-ExtraBold.ttf);
+}
