@@ -20,15 +20,15 @@
 
 @layer components {
   .container {
-    @apply flex flex-col space-y-8 text-white;
+    @apply flex flex-col space-y-8 text-white max-w-full py-8 items-center;
   }
 
   .card {
-    @apply flex w-full bg-slate-500 rounded-md;
+    @apply flex w-4/6 bg-slate-500 rounded-md;
   }
 
   .thumb-area {
-    @apply w-1/4 p-4;
+    @apply w-1/5 p-4;
   }
 
   .thumb {
@@ -36,7 +36,7 @@
   }
 
   .content-area {
-    @apply w-3/4 p-4;
+    @apply w-4/5 p-4;
   }
 
   .metadata {
