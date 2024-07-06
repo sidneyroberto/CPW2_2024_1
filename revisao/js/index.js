@@ -17,6 +17,10 @@ texto1.style.fontSize = "28px";
 texto1.style.display = "block";
 texto1.style.textAlign = "center";
 
+const colors = ["cyan", "black", "orange", "blue", "green", "purple"];
+
 divArea1.onmouseover = () => {
-  console.log("Passou o mouse");
+  const index = Math.floor(Math.random() * colors.length);
+  console.log(index);
+  divArea1.style.backgroundColor = colors[index];
 };
