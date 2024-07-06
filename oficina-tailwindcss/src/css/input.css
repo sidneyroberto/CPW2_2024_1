@@ -1,53 +1,7 @@
+@import "./base.css";
+@import "./components.css";
+@import "./utilities.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: "regular";
-    src: url(../fonts/NotoSansJP-Light.ttf);
-  }
-
-  @font-face {
-    font-family: "bold";
-    src: url(../fonts/NotoSansJP-ExtraBold.ttf);
-  }
-
-  body {
-    @apply bg-slate-700;
-  }
-}
-
-@layer components {
-  .container {
-    @apply flex flex-col space-y-8 text-white max-w-full py-8 items-center;
-  }
-
-  .card {
-    @apply flex w-4/6 bg-slate-500 rounded-md;
-  }
-
-  .thumb-area {
-    @apply w-1/5 p-4;
-  }
-
-  .thumb {
-    @apply w-full rounded;
-  }
-
-  .content-area {
-    @apply w-4/5 p-4;
-  }
-
-  .metadata {
-    @apply mb-1;
-  }
-
-  .key {
-    @apply font-[bold] text-sm mr-2;
-  }
-
-  .value {
-    @apply font-[regular] text-sm;
-  }
-}

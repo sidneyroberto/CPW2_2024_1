@@ -1,0 +1,13 @@
+@layer utilities {
+  .alt-card {
+    @apply bg-orange-100;
+  }
+
+  .alt-key {
+    @apply text-black;
+  }
+
+  .alt-value {
+    @apply text-black;
+  }
+}

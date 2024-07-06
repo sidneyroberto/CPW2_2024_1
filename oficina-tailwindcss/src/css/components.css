@@ -1,0 +1,33 @@
+@layer components {
+  .container {
+    @apply flex flex-col space-y-8 text-white max-w-full py-8 items-center;
+  }
+
+  .card {
+    @apply flex flex-col md:flex-row w-4/6 bg-slate-500 rounded-md;
+  }
+
+  .thumb-area {
+    @apply w-full md:w-1/5 p-4;
+  }
+
+  .thumb {
+    @apply w-full rounded;
+  }
+
+  .content-area {
+    @apply w-full md:w-4/5 p-4;
+  }
+
+  .metadata {
+    @apply mb-1;
+  }
+
+  .key {
+    @apply font-[bold] text-sm mr-2;
+  }
+
+  .value {
+    @apply font-[regular] text-sm;
+  }
+}
