@@ -1,6 +1,6 @@
 import TVShow from "../models/TVShow.js";
 
-const API_URL = "https://api.tvmaze.com/search/shows";
+const API_URL = "https://api.tvmaze.com/search/shows?";
 
 export const search = async (term) => {
   const response = await fetch(API_URL + new URLSearchParams({ q: term }));
