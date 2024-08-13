@@ -1,5 +1,6 @@
 export default class TVShow {
   constructor() {
+    this.id = "";
     this.name = "";
     this.type = "";
     this.language = "";

@@ -1,6 +1,8 @@
-import { search } from "./controllers/TVShowController.js";
+import { searchShows } from "./views/TVShowView.js";
 
-(async () => {
-  const shows = await search("attack on titan");
-  console.log(shows);
-})();
+const form = document.querySelector("#form-area form");
+form.onsubmit = (e) => {
+  e.preventDefault();
+
+  searchShows();
+};

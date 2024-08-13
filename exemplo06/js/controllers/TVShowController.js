@@ -10,10 +10,20 @@ export const search = async (term) => {
   results.forEach((r) => {
     // Associação por desestruturação
     const { show } = r;
-    const { name, type, language, genres, status, image, network, webChannel } =
-      show;
+    const {
+      id,
+      name,
+      type,
+      language,
+      genres,
+      status,
+      image,
+      network,
+      webChannel,
+    } = show;
 
     const tvShow = new TVShow();
+    tvShow.id = id;
     tvShow.name = name;
     tvShow.type = type;
     tvShow.language = language;
