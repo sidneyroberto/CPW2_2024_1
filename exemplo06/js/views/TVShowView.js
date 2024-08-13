@@ -24,8 +24,9 @@ export const searchShows = async () => {
 
   if (query) {
     $("not-found-message").style.display = "none";
-    // Solução paliativa
-    $("shows-area").innerHTML = `<p>Procurando...</p>`;
+
+    const loadingAnimation = `<img src="/img/loading.gif" alt="Procurando">`;
+    $("shows-area").innerHTML = loadingAnimation;
 
     // Não sabemos quanto tempo a instrução abaixo demorará para completar
     const shows = await search(query);

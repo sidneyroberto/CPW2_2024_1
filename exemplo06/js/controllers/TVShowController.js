@@ -29,7 +29,7 @@ export const search = async (term) => {
     tvShow.language = language;
     tvShow.genres = genres;
     tvShow.running = status === "Running" ? true : false;
-    tvShow.imageURL = image ? image.medium : "";
+    tvShow.imageURL = image ? image.medium : "/img/noimage.png";
     tvShow.channel = network ? network.name : webChannel.name;
 
     tvShows.push(tvShow);
