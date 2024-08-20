@@ -3,13 +3,24 @@ import { search } from "../controllers/TVShowController.js";
 const $ = document.getElementById.bind(document);
 
 const printCard = (show) => {
+  const id = show.id;
+  const name = show.name;
+  const language = show.language;
+  const genres = show.genres;
+  const type = show.type;
+  const isRunning = show.running ? "Sim" : "Não";
+  const channel = show.channel;
+  const poster = show.largeImageURL;
+
+  const url = `/details.html?id=${id}&name=${name}&lang=${language}&gen=${genres}&type=${type}&run=${isRunning}&ch=${channel}&poster=${poster}`;
+
   const showCard = `
     <div class="show-card">
-        <a href="/details.html?id=${show.id}">
+        <a href="${url}">
             <img src="${show.imageURL}" alt="${show.name}">
         </a>
 
-        <a href="/details.html?id=${show.id}">
+        <a href="${url}">
             <p>${show.name}</p>
         </a>
     </div>
@@ -40,4 +51,15 @@ export const searchShows = async () => {
       $("not-found-message").style.display = "block";
     }
   }
+};
+
+export const showDetails = (show) => {
+  $("poster").src = show.imageURL;
+  $("poster").alt = show.name;
+  $("name").innerText = show.name;
+  $("type").innerText = show.type;
+  $("language").innerText = show.language;
+  $("genres").innerText = show.genres;
+  $("running").innerText = show.running;
+  $("channel").innerText = show.channel;
 };

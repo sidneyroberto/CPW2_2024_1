@@ -4,9 +4,10 @@ export default class TVShow {
     this.name = "";
     this.type = "";
     this.language = "";
-    this.genres = [];
+    this.genres = "";
     this.running = false;
     this.imageURL = "";
+    this.largeImageURL = "";
     this.channel = "";
   }
 }
