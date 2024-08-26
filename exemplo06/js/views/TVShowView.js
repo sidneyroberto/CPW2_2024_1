@@ -46,6 +46,10 @@ export const searchShows = async () => {
 
     // Se tem resultados para exibir...
     if (shows.length > 0) {
+      // Salva os shows no local storage (armazenamento local)
+      const showsJSON = JSON.stringify(shows);
+      localStorage.setItem("shows", showsJSON);
+
       shows.forEach((s) => printCard(s));
     } else {
       $("not-found-message").style.display = "block";
@@ -62,4 +66,17 @@ export const showDetails = (show) => {
   $("genres").innerText = show.genres;
   $("running").innerText = show.running;
   $("channel").innerText = show.channel;
+};
+
+export const loadShows = () => {
+  const showsJSON = localStorage.getItem("shows");
+
+  /**
+   * Verifica se tem shows salvos no local storage.
+   * Caso tenha, exibe eles na página.
+   */
+  if (showsJSON) {
+    const shows = JSON.parse(showsJSON);
+    shows.forEach((s) => printCard(s));
+  }
 };
