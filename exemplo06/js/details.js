@@ -1,6 +1,10 @@
 import TVShow from "./models/TVShow.js";
 import { showDetails } from "./views/TVShowView.js";
 
+const location = window.location;
+const url = new URL(location.href);
+console.log(location.origin);
+
 const search = window.location.search;
 const params = new URLSearchParams(search);
 
